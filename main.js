@@ -1,10 +1,17 @@
+
 let c = document.getElementById("my-canvas");
 let ctx = c.getContext("2d");
-let loadImage = (src, callback) => {
-    let img = document.creatElement("img");
-    img.onload = () => callback(img);
-    img.src = src;
+//let loadImage = (src, callback) => {
+    //let img = document.creatElement("img");
+    //img.onload = () => callback(img);
+   // img.src = src;
+//};
+let img=document.createElement("img");
+img.onload=()=>{
+    ctx.drawingImage(img, 0, 0, 500, 500);
+
 };
+img.src="/images/idle.png"
 
 
 let imagePath = (frameNumber, animation) => {
